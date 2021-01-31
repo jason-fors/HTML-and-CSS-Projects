@@ -23,21 +23,24 @@ just to make it easier to read the code. -->
             <h3 id="bodyheading"> This is a Heading 3 in the body & main.</h3>
             <!-- id identifies the element. It must be unique and can be referenced elsewhere. -->
             <p>
-            This is a paragraph in the body & main.<br>
+            This is a paragraph in the body & main. With extra &nbsp&nbsp&nbsp spaces.<br>
             <img src="http://www.freeimageslive.com/galleries/objects/tickets/preview/happy_sign.jpg" title="Smiling face on an electronic sign" width="160" height="104"/>
             <!-- That above is an image tag, with source attribute. -->
             <br> <br> <!--These are line breaks.-->
-            Look at <a href="Dog.html">this dog</a>! <!-- Implicit href -->
-            <br><br>
-            Or just look at it here:<br>
-            <img src="thatsmydog.jpg" alt="Happy dog with stick." width="160" height="104">
-            <br><br>
 
-            <blockquote cite="https://www.akc.org/dog-breeds/plott-hound/"> <!-- Blockquote. For citing from other pages -->
-            The Plott Hound, a hound with a curious name and a unique history,
-            is a rugged, relentless <br>hunting dog who is a mellow gentleman at
-            home but fearless, implacable, and bold at work. <br>This eye-catching
-            scenthound is North Carolina's state dog.</blockquote>
+            <section> <!-- Identifies a section. -->
+                Look at <a href="Dog.html">this dog</a>! <!-- Implicit href -->
+                <br><br>
+                Or just look at it here:<br>
+                <img src="thatsmydog.jpg" alt="Happy dog with stick." width="160" height="104">
+                <br><br>
+
+                <blockquote cite="https://www.akc.org/dog-breeds/plott-hound/"> <!-- Blockquote. For citing from other pages -->
+                The Plott Hound, a hound with a curious name and a unique history,
+                is a rugged, relentless <br>hunting dog who is a mellow gentleman at
+                home but <span style="font-style:italic; font-weight:bold;"">fearless, implacable, and bold</span> at work. <br>This eye-catching
+                scenthound is North Carolina's state dog.</blockquote>
+            </section>
 
             <br><br>
             <a href="https://github.com/jason-fors">Here's a link to my GitHub</a>
@@ -51,7 +54,7 @@ just to make it easier to read the code. -->
             </nav>
         </main>
 
-        <footer> This is the footer. </footer> <!-- Authorship info, terms and conditions
+        <footer> This is the footer. &#169; 2021</footer> <!-- Authorship info, terms and conditions
             copyright, contact info, links to social media, etc. -->
 
     </body>
