@@ -1,0 +1,270 @@
+/*====================== GENERAL STYLING ============================*/
+
+body {
+    margin: 0%  
+}
+
+h1 {
+    text-transform: uppercase; 
+    font-family: "Trebuchet MS", Optima; /* try other options */
+    text-align: center; 
+    margin-top: 3%; 
+    color: #1a1a1a; 
+}
+
+h1:hover {
+    filter: grayscale(5%); 
+    transform: scale(1.1); /* try other options */
+    transition: transform 1s; /* adjust */
+}
+
+/* Styling for portfolio title text */
+.white-text {
+    color: #fff; 
+}
+
+p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; /* try other options */
+    text-align: left; 
+    letter-spacing: 1px; /* This expands the text slightly -- fiddle */
+    font-size: 20px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+p:hover {
+    transition: transform 1s; /* experiment, maybe faster */
+	transform: scale(1.01); /* try more */
+}
+
+.center {
+    text-align: center; 
+}
+
+/* Affects the quote, github link, and footer */
+.center:hover {
+    transition: transform 2s; /* Too slow? Try faster. */
+    transform: scale(1.1); /* See if more/less/none/different effect looks better */
+}
+
+a {
+    color: blue; 
+}
+
+q {
+    font-style: italic; 
+}
+
+img {
+    filter: grayscale(75%); /* Rids pics of 75% of their color */
+    border-radius: 8px; 
+    max-width: 100%; /* Ensures images stay within width of their container */
+    height: 340px; /* Sets the height of all images */
+    display: block; /* Specifying block display ensures images are able to be centered */
+    margin-left: auto; /* With "margin-right: auto" centers images */
+    margin-right: auto;
+    margin-top: 10px
+}
+
+img:hover {
+	filter: grayscale(5%);  /* Brings back color when hovered over */
+    transition: transform 1s; /* experment with this */
+	transform: scale(1.1); /* experiment with this */
+}
+
+/* On screens <576px images will be 100px tall and centered vertically in column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+footer {
+    padding: 2%; 
+    background-color: white;
+}
+/*=================== END OF GENERAL STYLING ============================*/
+
+/*=================== NAVBAR STYLING ====================================*/
+.Navbar {
+    overflow: hidden; 
+    background-color: black; 
+    position: fixed; /* Keeps navbar at the top of screen on scroll */
+    top: 0; 
+    width: 100%; 
+    z-index: 1; /* Keep navbar on top */
+    -webkit-animation: moveNav 3s; /* Applies the moveNav animation below for Safari 4.0 - 8.0 */
+    animation: moveNav 3s; /* Applies the moveNav animation for all other browsers */
+}
+
+/* moveNav animation effect for moving the nav bar in from left */
+@keyframes moveNav {
+    from {left: -100vw;} /* Navbar starts off screen to the left */
+    to {left: 0vw;} 
+}
+
+.Navbar a {
+    float: left; /* Specifies that text floats on the left on navbar */
+    display: block; 
+    color: white; 
+    padding: 14px 16px; 
+    text-decoration: none; /* Removes underlines under text on navbar */
+    font-family: Avant Garde, Helvetica; /* try other options */
+    font-size: 20px; 
+    text-align: center; 
+    position: relative; /* Sets text relative to its normal positioning, allowing use of animation below */
+    -webkit-animation: moveNavText 3s; /* Animation for Safari 4.0 - 8.0 */
+    animation: moveNavText 3s; /* Applies the moveNavText animation for 5.75s */ 
+}
+
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText {
+    from {top: -100vw;} /* Sets navbar text 100% above the viewport */
+    to {top: 0vw;} /* Lowers navbar text onto the navbar */
+}
+
+/* Screens <576px will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; 
+        font-size: 12px;
+    }
+}
+
+.Navbar a:hover {
+    background-color: #f4f4f4; 
+    color: black; 
+    font-weight: bold; 
+}
+
+/* Navbar home button */
+.Navbar a.active { 
+    background-color: #344c57;
+}
+/*========================== END OF NAVBAR STYLING ============================*/
+
+/*========================== VIDEO STYLING ====================================*/
+
+#Top_Video {
+    position: fixed; 
+    right: 0; 
+    bottom: 0; 
+    min-width: 100%; 
+    z-index: -1; /* Video goes on bottom */
+}
+
+/* Screens that are <576px will not display background video */
+@media screen and (max-width: 576px) {
+    #Top_Video {
+        display: none;
+    }
+}
+
+.Video_Text {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text to sit over */
+    color: white; 
+    width: 100%; /* Ensures video-text container fills width of video */
+    padding: 20px; /* Makes background go slightly beyond the text */
+    position: relative; /* Sets text relative to its normal positioning, allowing use of animation below */
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+/* Making overlay video text move up from bottom of page upon page load */
+@keyframes moveVideoText {
+    from {top: -100vw;} /* Video text starts above viewport */
+    to {top: 0vw;} 
+}
+/*=========================== END OF VIDEO STYLING ================================*/
+
+/*=========================== TABLE STYLING styling of the columns and rows within table =====*/
+
+* { /* asterisk univerally applies effect to all elements on page */
+    box-sizing: border-box; 
+} 
+
+.Column_1 {
+    float: left;
+    width: 50%; 
+    padding: 10px;
+    padding-top: 3%; 
+    height: 400px; /* may need to adjust depending on text */
+    background-color: #f2f2f2; 
+}
+
+/* Screens <576px will display scroll bar if the text overflows column height */
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #344c57;
+}
+
+/* For final row, overrides height and padding to provide more room for the contact form */
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.Row:after {
+	content: ""; /* Leaving this blank allows footer to be displayed - removing it makes the footer overwrite a column */
+	display: table; 
+	clear: both; /* Clears other elements from floating on left or right of element */
+}
+/*====================== END OF TABLE STYLING ==============================*/
+
+/*====================== CONTACT FORM STYLING ==============================*/
+
+input[type=text] {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; /* Creates box with border around contact form input boxes */
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical; /* Allows user to resize text boxes vertically ??????? */
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset; 
+}
+
+/* Submit button */
+input[type=submit] {
+    background-color: black; 
+    color: white; 
+    font-weight: bold; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    display: block; 
+    margin-left: auto; 
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=submit]:hover {
+    background-color: white; 
+    color: black; 
+    transform: scale(1.5); 
+    transition: transform 1.5s; /* This may be too long. Try other options. */
+}
+
+form {
+    border-radius: 5px; 
+    background-color: #f2f2f2; 
+    padding: 10px; 
+    font-family: "Trebuchet MS", Optima;
+}
+/*====================== END OF CONTACT FORM STYLING ===============================*/
