@@ -1,0 +1,58 @@
+<!-- Structure of an html page. It is good practice to indent,
+just to make it easier to read the code. -->
+
+<DOCTYPE! html> <!-- Set doctype first. Currently declares HTML5 -->
+<html lang="en"> <!-- Goes around all elements. Can set language. -->
+
+    <head> <!-- Goes around heading elements -->
+    <!-- Head contains titles, scripts, file attachments (e.g., CSS, Javascript),
+    character encoding, meta data, etc. -->
+        <meta name="author" content="Info on coding HTML"> <!-- Stuff about the page, not displayed by browser -->
+        <meta charset ="utf-8"> <!-- utf-8 is the default. Meta tag self-terminates -->
+
+        <title>This Is the Title</title> <!-- Defines title of page -->
+    </head>
+
+    <body> <!-- All the stuff you want in the page. -->
+        <header>
+            <h1> This is a Heading 1 in the header in the body. </h1>
+            <!-- Headings h1 through h6 get progressively smaller -->
+        </header>
+
+        <main> <!-- Most important content goes here. Only use 1 main. -->
+            <h3 id="bodyheading"> This is a Heading 3 in the body & main.</h3>
+            <!-- id identifies the element. It must be unique and can be referenced elsewhere. -->
+            <p>
+            <font color="red">This is a paragraph in the body & main.</font><br> <!-- Simplest way to do a font color. Can use hex color, etc. -->
+            <img src="http://www.freeimageslive.com/galleries/objects/tickets/preview/happy_sign.jpg" title="Smiling face on an electronic sign" width="160" height="104"/>
+            <!-- That above is an image tag, with source attribute. -->
+            <br> <br> <!--These are line breaks.-->
+            Look at <a href="Dog.html">this dog</a>! <!-- Implicit href -->
+            <br><br>
+            Or just look at it here:<br>
+            <img src="thatsmydog.jpg" title="Happy dog with stick." width="160" height="104">
+            <br><br>
+            <script> alert("This is a Javascript alert."); </script>
+            <!-- Put Javascript between these script tags. Common practice is to put the
+            script in another file and just do <script src="path to script"></script> -->
+
+            <br><br>
+
+            <a href="https://github.com/jason-fors">Here's a link to my GitHub</a>
+            <!--That's how you do a hyperlink. -->
+            </p>
+
+            <nav>  <!-- nav tag for a collection of links. Usually relative links (w/in website)-->
+                <a href="assignment.html">HOME</a> |
+                <a href="Dog.html"> ABOUT</a> |
+                <a href="Dog.html"> FAQ</a> |
+                <a href="Dog.html"> CONTACT</a><br><br>
+            </nav>
+        </main>
+
+        <footer> This is the footer. </footer> <!-- Authorship info, terms and conditions
+            copyright, contact info, links to social media, etc. -->
+
+    </body>
+
+</html>
