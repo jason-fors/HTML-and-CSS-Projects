@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset ="utf-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="./css/keyframes_demo.css">
+<!--        <script src="./js/keyframes_demo.js"></script> -->
+    </head>
+
+    <body>
+        <img src="./images/smileyface1.png">
+        
+        <p id="myDog"></p>
+
+        <script>
+            /* set the data as a key/value pair to be saved locally in your browser */
+            localStorage.setItem("Name", "Wilson");
+            /* then use the key "Name" to greturn its value "Dax" */
+            document.getElementById("myDog").innerHTML = localStorage.getItem("Name");
+            
+        </script>
+
+    </body>
+
+</html>

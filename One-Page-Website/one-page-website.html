@@ -136,14 +136,13 @@
                     <h3>For addtional help, contact us.</h3>
                     <p>Please provide some basic information</p>
                     <div>
-                        <form action="" method="post">
+                        <form name="myForm" action="" onsubmit="return validateForm()" method="post">
                             <input class="rsvp" type="text" placeholder="First Name"><br>
                             <input class="rsvp" type="text" placeholder="Last Name"><br>
                             <input class="rsvp" type="text" placeholder="Email"><br>
-                            <input class="rsvp" type="text" placeholder="Topic">
-                        <div>
+                            <input class="rsvp" type="text" placeholder="Phone Number" name="phonenum"><br>
                             <input type="submit" value="Submit">
-                        </div>
+
                         </form>
                     </div>
                 </div>

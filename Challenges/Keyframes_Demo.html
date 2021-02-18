@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset ="utf-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="./css/keyframes_demo.css">
+<!--        <script src="./js/keyframes_demo.js"></script> -->
+    </head>
+
+    <body>
+        <img src="./images/smileyface1.png">
+        
+        <p id="myDog"></p>
+
+        <script>
+            /* JavaScript Dictionary Object */
+            var dog = {
+                name: "Wilson",
+                breed: "Plott Hound",
+                color: "Brown"
+            };
+            var JSONstring = JSON.stringify(dog);
+            document.getElementById("myDog").innerHTML = JSONstring;
+            
+        </script>
+
+    </body>
+
+</html>
